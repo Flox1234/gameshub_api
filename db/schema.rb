@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_01_31_191437) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_01_104200) do
+  create_table "jogos", force: :cascade do |t|
+    t.float "rating"
+    t.string "nome"
+    t.string "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "nome_do_modelos", force: :cascade do |t|
+    t.string "nome"
+    t.decimal "salario"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "username", null: false
@@ -19,4 +34,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_01_31_191437) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
