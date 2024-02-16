@@ -19,13 +19,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_01_104200) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "nome_do_modelos", force: :cascade do |t|
-    t.string "nome"
-    t.decimal "salario"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "username", null: false
